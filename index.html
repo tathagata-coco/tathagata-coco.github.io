@@ -99,6 +99,10 @@
 <header class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
+        <p class="typing-text">
+    <span id="typing"></span>
+</p>
+
       
     </div>
 </header>
@@ -114,6 +118,16 @@
     color: white;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
+    .typing-text {
+    font-size: 18px;
+    margin-top: 10px;
+    opacity: 0.95;
+    height: 26px; /* prevents layout shift */
+    color: #66e3ff;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
 
 /* dark gradient overlay for readability */
 .hero-overlay {
@@ -167,6 +181,43 @@ My experience spans operations management, performance management, people leader
     <div><strong>Project 2:</strong> Morocco Go-To-Market Strategy (Consulting)</div>
     <div><strong>Project 3:</strong> Sales Forecasting Using SARIMA & SARIMAX</div>
 </div>
+<script>
+const texts = [
+    "AI-ML Enthusiast",
+    "Data-driven Decision Maker",
+    "Tech Explorer"
+];
+
+let idx = 0;
+let char = 0;
+let isDeleting = false;
+let speed = 100;
+
+function typeEffect() {
+    const element = document.getElementById("typing");
+
+    if (!isDeleting && char <= texts[idx].length) {
+        element.innerHTML = texts[idx].substring(0, char++);
+        speed = 90;
+    } else if (isDeleting && char >= 0) {
+        element.innerHTML = texts[idx].substring(0, char--);
+        speed = 50;
+    }
+
+    if (!isDeleting && char === texts[idx].length) {
+        isDeleting = true;
+        speed = 1500; // pause before deleting
+    } else if (isDeleting && char === 0) {
+        isDeleting = false;
+        idx = (idx + 1) % texts.length;
+        speed = 120;
+    }
+
+    setTimeout(typeEffect, speed);
+}
+
+typeEffect();
+</script>
 
 </body>
 </html>
