@@ -91,10 +91,51 @@
 </head>
 <body>
 
-<header>
-    <h1>Tathagata Chakraborty</h1>
-    <p>AI enthusiast, Data-driven decision maker & tech explorer</p>
+<header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Tathagata Chakraborty</h1>
+        <p>AI enthusiast, Data-driven decision maker & tech explorer</p>
+    </div>
 </header>
+
+<style>
+/* HERO COVER IMAGE */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 120px 20px;
+    background: url("https://media.licdn.com/dms/image/C4D12AQFsGwf30_Slzw/article-cover_image-shrink_720_1280/0/1604158228699?e=2147483647&v=beta&t=RrtE9nL0Or0W1oR_JnObJRQAqdYn3B6eYjfcSj682s0")
+                center/cover no-repeat;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* dark gradient overlay for readability */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+</style>
+
 
 <div class="profile">
     <img src="profile.jpeg" alt="Profile Picture">
