@@ -194,17 +194,17 @@ const texts = [
 let idx = 0;
 let char = 0;
 let isDeleting = false;
-let speed = 100;
+let speed = 150;
 
 function typeEffect() {
     const element = document.getElementById("typing");
 
     if (!isDeleting && char <= texts[idx].length) {
         element.innerHTML = texts[idx].substring(0, char++);
-        speed = 90;
+        speed = 150;
     } else if (isDeleting && char >= 0) {
         element.innerHTML = texts[idx].substring(0, char--);
-        speed = 50;
+        speed = 150;
     }
 
     if (!isDeleting && char === texts[idx].length) {
