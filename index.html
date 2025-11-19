@@ -192,16 +192,101 @@
 <!-- Skills -->
 <div id="skills" class="section">
     <h2>Skills</h2>
-    <p>Python, SQL, Tableau, Power BI, Machine Learning (scikit-learn), Deep Learning basics, Time-series forecasting (ARIMA/SARIMAX), Cloud (AWS), Git, Docker, Data Visualization, Statistical Analysis.</p>
+
+    <style>
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 22px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .skill-item {
+            background: #0f1116;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+            transition: 0.25s ease;
+        }
+        .skill-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+        }
+        .skill-item img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            margin-bottom: 8px;
+        }
+        .skill-item span {
+            font-size: 14px;
+            color: #cfeaff;
+        }
+    </style>
+
+    <div class="skills-grid">
+        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><span>Python</span></div>
+        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"><span>PostgreSQL</span></div>
+        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tableau/tableau-original.svg"><span>Tableau</span></div>
+        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"><span>Java</span></div>
+        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"><span>HTML</span></div>
+        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"><span>CSS</span></div>
+        <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"><span>JavaScript</span></div>
+        <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Microsoft_Office_Excel_%282019–present%29.svg"><span>Advanced Excel</span></div>
+        <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Microsoft_PowerPoint_2013_logo.svg"><span>PowerPoint</span></div>
+        <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Microsoft_Word_logo_%282013-2019%29.svg"><span>MS Word</span></div>
+        <div class="skill-item"><img src="https://anylogistix.com/local/templates/alf/images/anylogistix_logo.svg"><span>AnyLogic / anyLogistix</span></div>
+        <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Minitab_Logo.png"><span>Minitab</span></div>
+    </div>
 </div>
 
 <!-- Work Experience -->
 <div id="experience" class="section">
     <h2>Work Experience</h2>
-    <p>
-    <strong>Operations Manager I — Amazon</strong><br>
-    Driving operational excellence through leadership, automation, and data-backed decision-making. Coordinated cross-functional teams, improved KPIs, and implemented automation to reduce manual effort.
-    </p>
+
+    <style>
+        .work-card {display:flex;gap:18px;margin-bottom:32px;align-items:flex-start}
+        .work-card img {width:56px;height:56px;object-fit:contain;border-radius:8px;background:#fff;padding:4px}
+        .work-card p {margin:0;line-height:1.55}
+    </style>
+
+    <!-- Amazon -->
+    <div class="work-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+        <p>
+            <strong>Amazon – Operations Manager I (Buyers Abuse Department) | May 2025 – Present</strong><br>
+            • Managing a team of 25 investigators; tracking KPIs including productivity, quality, NPT, and schedule adherence.<br>
+            • Implementing Generative AI and automation solutions to enhance investigation accuracy and operational efficiency.<br>
+            • Handling team escalations, performance reviews, and day-to-day operational issues.<br>
+            • Driving department-level metric improvement through qualitative and quantitative analysis.<br>
+            • Collaborating with leadership on data-driven process enhancements and investigator performance strategy.<br>
+            • Overseeing hiring, onboarding, and conversion of contract employees into permanent roles.
+        </p>
+    </div>
+
+    <!-- TCS -->
+    <div class="work-card">
+        <img src="https://logos-world.net/wp-content/uploads/2023/02/TCS-Logo.png" alt="TCS Logo">
+        <p>
+            <strong>Tata Consultancy Services – Associate System Engineer | Aug 2021 – Jun 2023</strong><br>
+            • Developed full-stack Java applications for clients including Bajaj Finserv, Camlin, and Tata Sons.<br>
+            • Optimized SQL queries to reduce process time by 20%, improving system performance.<br>
+            • Implemented automated email workflows, ensuring smooth applicant communication.<br>
+            • Led a 7-member development team using Agile methodology for sprint planning and CR roadmaps.
+        </p>
+    </div>
+
+    <!-- TVS -->
+    <div class="work-card">
+        <img src="https://seeklogo.com/images/T/tvs-motor-company-ltd-logo-0F3C7E3EB4-seeklogo.com.png" alt="TVS Logo">
+        <p>
+            <strong>TVS Motors – Country Manager Trainee (Summer Internship) | Apr 2024 – Jul 2024</strong><br>
+            • Conducted market and regression analysis to identify strategic opportunities in Morocco’s two-wheeler market.<br>
+            • Coordinated with logistics and export teams to dispatch 46 NTORQ units to Morocco via the LOC process.<br>
+            • Performed competitive benchmarking and pricing strategy analysis for two NTORQ models.<br>
+            • Collaborated with cross-functional teams to develop a go-to-market strategy for Morocco expansion.
+        </p>
+    </div>
 </div>
 
 <!-- Projects -->
