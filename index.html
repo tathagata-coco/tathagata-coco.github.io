@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tathagata Chakraborty | Portfolio</title>
     <style>
+        html{scroll-behavior:smooth}
         body {
             margin: 0;
             padding: 0;
@@ -14,23 +15,35 @@
         }
 
         /* HEADER */
-        header {
+        header.hero {
             text-align: center;
-            padding: 80px 20px;
+            padding: 80px 20px 24px 20px;
             background: linear-gradient(135deg, #111827, #1f2937, #0f172a);
             color: white;
             box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            position: sticky;
+            top: 0;
+            z-index: 999;
         }
+        header .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
         header h1 {
-            font-size: 40px;
+            font-size: 28px;
             margin: 0;
             letter-spacing: 1px;
         }
         header p {
-            font-size: 18px;
-            margin-top: 10px;
-            opacity: 0.8;
+            font-size: 14px;
+            margin-top: 4px;
+            opacity: 0.85;
         }
+
+        /* NAV BUTTONS */
+        nav.top-nav{display:flex;gap:10px}
+        nav.top-nav a{display:inline-block;padding:8px 12px;border-radius:12px;text-decoration:none;font-weight:600;font-size:14px}
+        nav.top-nav a.primary{background:#06b6d4;color:#071022}
+        nav.top-nav a.ghost{background:transparent;color:#cbd5e1;border:1px solid rgba(255,255,255,0.04)}
+        nav.top-nav a:hover{opacity:0.95}
+        nav.top-nav a.active{box-shadow:0 6px 20px rgba(6,182,212,0.08);outline:2px solid rgba(6,182,212,0.08)}
 
         /* PROFILE IMAGE */
         .profile {
@@ -42,31 +55,32 @@
         .profile img {
            width: 170px;
     height: 170px;
-    border-radius: 80% !important;     /* forces circle */
-    object-fit: cover;                  /* keeps face centered */
+    border-radius: 50% !important;
+    object-fit: cover;
     border: 4px solid #1f2937;
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
     position: relative;
     z-index: 9999;
         }
 
         /* SECTIONS */
         .section {
-            margin: 30px;
+            margin: 30px auto;
             padding: 25px;
             border-radius: 15px;
             background: #1b1d23;
-            box-shadow: 
+            max-width: 1000px;
+            box-shadow:
                 8px 8px 20px rgba(0,0,0,0.5),
-                -5px -5px 15px rgba(255,255,255,0.05);
+                -5px -5px 15px rgba(255,255,255,0.02);
             transition: 0.3s ease;
         }
 
         .section:hover {
             transform: translateY(-4px);
-            box-shadow: 
+            box-shadow:
                 12px 12px 22px rgba(0,0,0,0.6),
-                -6px -6px 16px rgba(255,255,255,0.07);
+                -6px -6px 16px rgba(255,255,255,0.03);
         }
 
         h2 {
@@ -92,16 +106,30 @@
         .projects div:last-child {
             border-bottom: none;
         }
+
+        /* small screens adjustments */
+        @media (max-width:720px){
+            header .header-inner{flex-direction:column;gap:12px;padding-bottom:8px}
+            .profile img{width:140px;height:140px}
+        }
     </style>
 </head>
 <body>
 
 <header class="hero">
     <div class="hero-overlay"></div>
-    <div class="hero-content">
-        
+    <div class="hero-content header-inner">
+        <div>
+            <h1>Tathagata Chakraborty</h1>
+            <p style="margin:0">MBA • Data Analytics • AI/ML • Cloud</p>
+        </div>
 
-      
+        <nav class="top-nav" id="topnav">
+            <a class="primary" href="#skills">Skills</a>
+            <a class="ghost" href="#experience">Work Experience</a>
+            <a class="ghost" href="#projects">Projects</a>
+            <a class="ghost" href="#education">Education</a>
+        </nav>
     </div>
 </header>
 
@@ -110,7 +138,7 @@
 .hero {
     position: relative;
     text-align: center;
-    padding: 120px 20px;
+    padding: 40px 20px 12px 20px;
     background: url("https://quotefancy.com/media/wallpaper/3840x2160/4883921-John-Tukey-Quote-This-is-my-favorite-part-about-analytics-Taking.jpg")
                 center/cover no-repeat;
     color: white;
@@ -147,7 +175,7 @@
 
 .hero p {
     font-size: 18px;
-    margin-top: 10px;
+    margin-top: 6px;
     opacity: 0.9;
 }
 </style>
@@ -155,19 +183,39 @@
 
 <div class="profile">
     <img src="profile.jpeg" alt="Profile Picture">
-      <h1>Tathagata Chakraborty</h1>
-    <h2><p class="typing-text">
+      <h1 style="margin:6px 0 2px 0">Tathagata Chakraborty</h1>
+    <h2 style="font-weight:600"><p class="typing-text">
     <span id="typing"></span>
 </p></h2>
 </div>
 
-<div class="section">
-    <h2>About Me</h2>
+<!-- Skills -->
+<div id="skills" class="section">
+    <h2>Skills</h2>
+    <p>Python, SQL, Tableau, Power BI, Machine Learning (scikit-learn), Deep Learning basics, Time-series forecasting (ARIMA/SARIMAX), Cloud (AWS), Git, Docker, Data Visualization, Statistical Analysis.</p>
+</div>
+
+<!-- Work Experience -->
+<div id="experience" class="section">
+    <h2>Work Experience</h2>
     <p>
-        I am an MBA graduate with a dual major in Data Analytics and Operations, currently working at Amazon as an Operations Manager I, where I drive operational excellence through leadership, automation, and data-backed decision-making.
-I am passionate about cloud technologies, artificial intelligence, machine learning, big data systems, generative AI, and large language models, and enjoy exploring how these technologies can transform business processes at scale.
-My experience spans operations management, performance management, people leadership, quality control, market research, analytics, and software development. I love designing automated workflows, improving operational KPIs, forecasting trends, and solving real-world business problems using data, technology, and structured execution.
+    <strong>Operations Manager I — Amazon</strong><br>
+    Driving operational excellence through leadership, automation, and data-backed decision-making. Coordinated cross-functional teams, improved KPIs, and implemented automation to reduce manual effort.
     </p>
+</div>
+
+<!-- Projects -->
+<div id="projects" class="section projects">
+    <h2>Projects</h2>
+    <div><strong>Project 1:</strong> Student Outcome Prediction (ML)</div>
+    <div><strong>Project 2:</strong> Morocco Go-To-Market Strategy (Consulting)</div>
+    <div><strong>Project 3:</strong> Sales Forecasting Using SARIMA &amp; SARIMAX</div>
+</div>
+
+<!-- Education -->
+<div id="education" class="section">
+    <h2>Education</h2>
+    <p>MBA — Dual Major in Data Analytics &amp; Operations</p>
 </div>
 
 <div class="section">
@@ -175,12 +223,6 @@ My experience spans operations management, performance management, people leader
     <a href="tathagata_cv_wout_pic.pdf" download>Click here to download my CV</a>
 </div>
 
-<div class="section projects">
-    <h2>Projects</h2>
-    <div><strong>Project 1:</strong> Student Outcome Prediction (ML)</div>
-    <div><strong>Project 2:</strong> Morocco Go-To-Market Strategy (Consulting)</div>
-    <div><strong>Project 3:</strong> Sales Forecasting Using SARIMA & SARIMAX</div>
-</div>
 <script>
 const texts = [
     "AI-ML Enthusiast ",
@@ -194,17 +236,17 @@ const texts = [
 let idx = 0;
 let char = 0;
 let isDeleting = false;
-let speed = 150;
+let speed = 120;
 
 function typeEffect() {
     const element = document.getElementById("typing");
 
     if (!isDeleting && char <= texts[idx].length) {
         element.innerHTML = texts[idx].substring(0, char++);
-        speed = 900;
+        speed = 120;
     } else if (isDeleting && char >= 0) {
         element.innerHTML = texts[idx].substring(0, char--);
-        speed = 900;
+        speed = 50;
     }
 
     if (!isDeleting && char === texts[idx].length) {
@@ -213,13 +255,32 @@ function typeEffect() {
     } else if (isDeleting && char === 0) {
         isDeleting = false;
         idx = (idx + 1) % texts.length;
-        speed = 900;
+        speed = 300;
     }
 
     setTimeout(typeEffect, speed);
 }
 
 typeEffect();
+
+// Highlight nav based on scroll position
+const sections = Array.from(document.querySelectorAll('div[id]'))
+    .filter(s => ['skills','experience','projects','education'].includes(s.id));
+const navLinks = Array.from(document.querySelectorAll('#topnav a'));
+
+function onScroll(){
+  const y = window.scrollY + 140; // offset to trigger a bit earlier
+  let current = sections[0];
+  for(let s of sections){
+    if(s.offsetTop <= y) current = s;
+  }
+  navLinks.forEach(a => a.classList.remove('active'));
+  const active = navLinks.find(a => a.getAttribute('href') === '#'+current.id);
+  if(active) active.classList.add('active');
+}
+window.addEventListener('scroll', onScroll);
+window.addEventListener('load', onScroll);
+
 </script>
 
 </body>
