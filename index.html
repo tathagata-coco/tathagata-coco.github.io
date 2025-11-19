@@ -201,19 +201,19 @@ function typeEffect() {
 
     if (!isDeleting && char <= texts[idx].length) {
         element.innerHTML = texts[idx].substring(0, char++);
-        speed = 150;
+        speed = 900;
     } else if (isDeleting && char >= 0) {
         element.innerHTML = texts[idx].substring(0, char--);
-        speed = 150;
+        speed = 900;
     }
 
     if (!isDeleting && char === texts[idx].length) {
         isDeleting = true;
-        speed = 1500; // pause before deleting
+        speed = 900; // pause before deleting
     } else if (isDeleting && char === 0) {
         isDeleting = false;
         idx = (idx + 1) % texts.length;
-        speed = 120;
+        speed = 900;
     }
 
     setTimeout(typeEffect, speed);
