@@ -294,7 +294,7 @@
 <!-- Projects -->
 <div id="projects" class="section projects">
     <h2>Projects</h2>
-    <a href="EDA_Billionaires_with_findings.pdf" download style="text-decoration:none; color:inherit;">
+    <a href="EDA_Billionaires_with_findings.pdf" download onclick="showDownloadPopup()" style="text-decoration:none; color:inherit;">
     <div style="display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid #2a2d35;">
         <img src="elon.png" alt="Project Icon" style="width:90px; height:90px; border-radius:6px; object-fit:cover;">
         <strong>Exploratory Data Analysis on Billionaires Dataset using Python (click to download)</strong>
@@ -431,6 +431,10 @@ typeEffect();
 const sections = Array.from(document.querySelectorAll('div[id]'))
     .filter(s => ['skills','experience','projects','education'].includes(s.id));
 const navLinks = Array.from(document.querySelectorAll('#topnav a'));
+
+function showDownloadPopup() {
+    alert("📥 Your download is starting...");
+}
 
 function onScroll(){
   const y = window.scrollY + 80; // offset to trigger a bit earlier
